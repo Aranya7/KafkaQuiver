@@ -1,0 +1,11 @@
+{
+  "before": "String",
+  "after": "String",
+  "patch": "String",
+  "filter": "String",
+  "updateDescription": "JSON",
+  "source": "JSON",
+  "op": "String",
+  "ts_ms": "timestamp",
+  "transaction": "String"
+}
