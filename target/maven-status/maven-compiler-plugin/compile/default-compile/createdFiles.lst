@@ -3,6 +3,7 @@ com/lentra/realtime/config/store/ConfigStoreBuilder$ConfigStore.class
 com/lentra/realtime/schema/CDCSchemaBuilder.class
 com/lentra/realtime/entity/endpoint/SourceEndPoint.class
 com/lentra/realtime/authenticator/implementations/AWSMSKSASLAuthenticator.class
+com/lentra/realtime/property/watcher/DefaultObservable.class
 com/lentra/realtime/config/store/AbstractConfigStore.class
 com/lentra/realtime/authenticator/implementations/AbstractAuthenticator.class
 com/lentra/realtime/entity/endpoint/EndPoint.class
@@ -24,6 +25,7 @@ com/lentra/realtime/pipelines/Pipeline.class
 com/lentra/realtime/enums/EndPointType.class
 com/lentra/realtime/pipelines/AbstractRealtimePipeline.class
 com/lentra/realtime/factories/AuthenticatorFactory.class
+com/lentra/realtime/property/watcher/PropertiesObserver.class
 com/lentra/realtime/exception/KStreamProcessingException.class
 com/lentra/realtime/constants/TopicConstants.class
 com/lentra/realtime/enums/TopicType.class
@@ -31,8 +33,10 @@ com/lentra/realtime/exception/PipelineInitializationException.class
 com/lentra/realtime/utils/SchemaUtils.class
 com/lentra/realtime/config/store/AppStore.class
 com/lentra/realtime/exception/SchemeBuilderException.class
+com/lentra/realtime/property/watcher/JSONObservable.class
 com/lentra/realtime/exception/KafkaTopicNotFoundException.class
 com/lentra/realtime/handler/datatypes/StringISODateToEpochConverter.class
+com/lentra/realtime/property/watcher/AbstractObservable.class
 com/lentra/realtime/authenticator/implementations/SCRAMSASLAuthenticator.class
 com/lentra/realtime/config/store/Store.class
 com/lentra/realtime/factories/SchemaFactory.class
@@ -43,13 +47,17 @@ com/lentra/realtime/entity/Topic/TopicBuilder.class
 com/lentra/realtime/constants/AuthenticatorConstants.class
 com/lentra/realtime/constants/PipelineConstants.class
 com/lentra/realtime/mappers/JsonFileMapperReader.class
+com/lentra/realtime/exception/PropertyObservableFileComparisonException.class
+com/lentra/realtime/factories/ObservableFactory.class
 com/lentra/realtime/exception/GetDestinationValueException.class
 com/lentra/realtime/factories/DataTypeConversionFactory.class
 com/lentra/realtime/pipelines/KStreamPipeline.class
 com/lentra/realtime/entity/endpoint/DestinationEndPoint.class
 com/lentra/realtime/utils/FieldUtils.class
 com/lentra/realtime/MCKStreamRealtime/App.class
+com/lentra/realtime/property/watcher/DefaultObservable$1.class
 com/lentra/realtime/exception/PipelineConfigurationNotFoundException.class
+com/lentra/realtime/property/watcher/PropertiesObservable.class
 com/lentra/realtime/exception/NoPropertryReaderFoundError.class
 com/lentra/realtime/pipelines/impl/AbstractImplementation.class
 com/lentra/realtime/exception/PipelineAuthenticationException.class
@@ -61,6 +69,7 @@ com/lentra/realtime/config/store/ConfigStoreBuilder.class
 com/lentra/realtime/schema/DomainEventSchemaBuilder.class
 com/lentra/realtime/factories/MapperReaderFactory.class
 com/lentra/realtime/exception/PipelineBuildException.class
+com/lentra/realtime/exception/PropertyObservableUpdatedFileLoadException.class
 com/lentra/realtime/mappers/PropertyFileMapperReader.class
 com/lentra/realtime/exception/PipelineImplementationException.class
 com/lentra/realtime/handler/datatypes/StringToDoubleConverter.class

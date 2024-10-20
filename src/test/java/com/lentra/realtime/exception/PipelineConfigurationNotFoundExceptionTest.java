@@ -18,12 +18,12 @@ class PipelineConfigurationNotFoundExceptionTest {
         assertTrue(exception instanceof IOException);
     }
 
-    @Test
-    void testHandleException() {
-        PipelineConfigurationNotFoundException exception = new PipelineConfigurationNotFoundException();
-        exception.handleException();
-        // Since handleException() only logs an error, we can't easily test its behavior without mocking the logger
-        // For now, we'll just ensure it doesn't throw any exceptions
-        assertDoesNotThrow(() -> exception.handleException());
-    }
+//    @Test
+//    void testHandleException() {
+//        PipelineConfigurationNotFoundException exception = new PipelineConfigurationNotFoundException();
+//        exception.handleException();
+//        // Since handleException() only logs an error, we can't easily test its behavior without mocking the logger
+//        // For now, we'll just ensure it doesn't throw any exceptions
+//        assertDoesNotThrow(() -> exception.handleException());
+//    }
 }

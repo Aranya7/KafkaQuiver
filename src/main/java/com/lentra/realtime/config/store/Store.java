@@ -16,4 +16,5 @@ public interface Store
 	public Map<String,String> getSourceEndPointTopicConfiguration();
 	public Map<String,String> getDestinationEndPointConfiguration();
 	public Map<String,String> getDestinationEndPointTopicConfiguration();
+	public String getPropertiesFileFormat();
 }

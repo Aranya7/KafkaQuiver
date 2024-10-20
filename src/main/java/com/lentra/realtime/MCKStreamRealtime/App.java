@@ -9,6 +9,8 @@ import com.lentra.realtime.pipelines.Pipeline;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.IOException;
+
 public class App {
 	private static final Logger logger = LogManager.getLogger(App.class);
 
@@ -42,6 +44,7 @@ public class App {
 			e.handleException();
 
 		} catch (PipelineConfiguationContentNotFoundException e) {
+			e.handleException();
 
 		} catch (PipelineInitializationException e) {
 			e.handleException();
@@ -54,7 +57,11 @@ public class App {
 			e.handleException();
 		} catch (KafkaTopicNotFoundException e) {
 			e.handleException();
-		}
-	}
+		} catch (PropertyObservableUpdatedFileLoadException e) {
+			e.handleException();
+        } catch (PropertyObservableFileComparisonException e) {
+			e.handleException();
+        }
+    }
 
 }

@@ -12,7 +12,7 @@ public class PipelineConfigurationNotFoundException extends IOException{
     private static final Logger logger= LogManager.getLogger(PipelineConfigurationNotFoundException.class);
     public void handleException(){
         logger.error("PipelineConfigurationNotFoundException Exception:FileNotFound");
-
+        System.exit(0);
     }
 
 }

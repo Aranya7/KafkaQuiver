@@ -220,6 +220,10 @@ public class KafkaStreamPipelineIntegrationTest {
         } catch (PipelineBuildException | PipelineAuthenticationException | EndPointConfigurationNotFound |
                  KafkaTopicNotFoundException e) {
             throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (PropertyObservableFileComparisonException e) {
+            throw new RuntimeException(e);
         }
         Thread.sleep(2000);
 

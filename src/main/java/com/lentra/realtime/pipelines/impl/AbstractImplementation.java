@@ -42,6 +42,7 @@ public abstract class AbstractImplementation implements PipelineImplementation {
 	protected EndPoint source;
 	protected EndPoint target;
 	protected Pipeline pipeline;
+	protected KafkaStreams streams;
 
 	protected Producer<String, String> producer;
 	private static final DataTypeConversionFactory dataTypeConversionFactory = new DataTypeConversionFactory();
@@ -210,12 +211,24 @@ public abstract class AbstractImplementation implements PipelineImplementation {
 			EndPointConfigurationNotFound, KafkaTopicNotFoundException {
 		logger.info("Implementing Pipeline");
 
-		KafkaStreams streams = getKafkaStream(source.getUserDefinedTopicList());
+		streams = getKafkaStream(source.getUserDefinedTopicList());
 		streams.start();
 		Runtime.getRuntime().addShutdownHook(new Thread(streams::close));
 		
 		logger.info("Successfully implemented pipeline");
 
+	}
+
+	@Override
+	public void pause() {
+		logger.info("Pausing Pipeline");
+		streams.pause();
+	}
+
+	@Override
+	public void resume() {
+		logger.info("Resuming Pipeline");
+		streams.resume();
 	}
 
 	public static DataTypeConversionFactory getDatatypeconversionfactory() {

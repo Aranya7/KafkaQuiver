@@ -9,10 +9,11 @@ import com.lentra.realtime.enums.OffsetPositions;
 import com.lentra.realtime.exception.PipelineInitializationException;
 import com.lentra.realtime.pipelines.impl.PipelineImplementation;
 
+import com.lentra.realtime.property.watcher.PropertiesObserver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public abstract class AbstractRealtimePipeline implements Pipeline {
+public abstract class AbstractRealtimePipeline implements Pipeline, PropertiesObserver {
 	private static Logger logger = LogManager.getLogger(AbstractRealtimePipeline.class);
 
 	private EndPoint sourceEndPoint;
@@ -132,5 +133,6 @@ public abstract class AbstractRealtimePipeline implements Pipeline {
 
 		logger.debug("Destination End Point configurations: \n {}" , destinationEndPoint);
 	}
+
 
 }

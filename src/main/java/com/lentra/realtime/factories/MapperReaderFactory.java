@@ -10,7 +10,8 @@ import com.lentra.realtime.mappers.JsonFileMapperReader;
 import com.lentra.realtime.mappers.MapperReader;
 import com.lentra.realtime.mappers.PropertyFileMapperReader;
 
-public abstract class MapperReaderFactory {
+public class MapperReaderFactory {
+	private static String propertyFileFormat;
 
 	private static final Logger logger = LogManager.getLogger(MapperReaderFactory.class);
 
@@ -21,10 +22,12 @@ public abstract class MapperReaderFactory {
 			if (path.contains(".json")) {
 				logger.debug("File extension identified : JSON");
 				logger.debug("Returning instance of JSON configuration reader");
+				propertyFileFormat = ".json";
 				return new JsonFileMapperReader();
 			} else if (path.contains(".properties")) {
 				logger.debug("File extension identified : Properties");
 				logger.debug("Returning instance of Property File reader");
+				propertyFileFormat = ".properties";
 				return new PropertyFileMapperReader(path);
 			}
 		} else {
@@ -32,5 +35,9 @@ public abstract class MapperReaderFactory {
 					path == null || !(path.contains(".")) ? "" : path.split(".")[1] );
 		}
 		throw new NoPropertryReaderFoundError("Failed in identifying the required reader implementation.");
+	}
+
+	public static String getPropertyFileFormat() {
+		return propertyFileFormat;
 	}
 }

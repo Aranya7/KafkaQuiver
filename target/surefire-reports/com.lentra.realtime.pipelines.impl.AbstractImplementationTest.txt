@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.lentra.realtime.pipelines.impl.AbstractImplementationTest
 -------------------------------------------------------------------------------
-Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.317 s - in com.lentra.realtime.pipelines.impl.AbstractImplementationTest
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.44 s - in com.lentra.realtime.pipelines.impl.AbstractImplementationTest
