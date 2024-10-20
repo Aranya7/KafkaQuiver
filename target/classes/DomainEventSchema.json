@@ -1,7 +1,0 @@
-{
-  "type": "String",
-  "data": "JSON",
-  "institution_id": "String",
-  "tenant_id": "String",
-  "created_on": "String"
-}
